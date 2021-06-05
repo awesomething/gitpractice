@@ -3,10 +3,66 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Git Practice</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+ 
+    <ol>By now you have already: 
+<li> Set up a GitHub account;and 2.) Installed Git on your computer. </li>
+<h6>Note: Use these steps if you have not yet initialized Git and GitHub repositories for your specific software project. Each software project needs its own local Git repository and matching remote (online) GitHub repository.</h6>
+<li>
+Log in to your GitHub account at https://github.com. In the upper right corner of the page, click the plus sign and choose ‘Create New Repository.’Enter a new repository name and click Create Repository. This step creates your remote (online) GitHub repository for the project.
+</li>
+<li>After installing all the defaults, next open the git bash terminal and get into your todo app, type
+cd todo (cd means change directory)
+ls (to list)</li>
+
+<li>Next type : git init - If it doesn't show a link that ends with .git, it means you didn't install git bash properly, use stackoverflow.</li>
+
+<li>Create READ ME.MD - next we are going to create a ReadMe file which is like a project description that you provide for anyone who might be interested in learning about or using your project.
+
+<p>For now, we'll create the file, but we won't put a lot of information in it because this is just a sample. </p>
+<code>
+touch Readme.md
+</code>
+You can fill out the readme file with basic information about your project later over time, you'll probably add more information to your readme file.As you update your project for now, just type the flilowing command, at the The command line:
+<code>
+Echo : "#todo " >> Readme.md
+</code>
+This is like saying, send these contents to the file called Readme.MD. And that's exactly what we just did. So, let's take a look. List all files again, with the command
+<code>
+ls - al
+</code>
+and you can, in fact see that we've created a file called Readme.MD. </li>
+<li>The next step is to create a git ignore file which tells git what to ignore inside our project directory. This is great. If we have files in this directory that we don't want to upload to our GitHub online repository. Type
+<code>
+touch .gitignore
+ls - al</code>
+</li>
+<li> Then open vs code by typing 
+<code>
+  code . 
+</code>
+<br> or open the files with a text editor of your choice and edit its contents to make sure you list all files in the project directory that you do NOT want to upload to your remote (online) GitHub repository. List one file on each line,then save and close the .gitignore file.</li>
+<p>Tip: You can use wildcards such as asterisks to match moltiple files, so if you want to ignore everything in a particolar sub-directory, type ‘FliderToIgnore/*’and Git will ignore all files in the flider called FliderToIgnore</p>
+<li> Add all project files to your local Git repository by typing 
+<code>
+  git add --all.
+</code>
+Tip: This command will ignore all files listed in the .gitignore file. </li>
+<li> Make your initial commit in the local Git repository by typing 
+<code>
+  git commit -m “Initial commit”
+</code>  
+.</li>
+<li> Link your online GitHub repository to your local Git repository by typing 
+<code>
+  git remote add origin https://github.com/username/repo-name
+</code>
+ </li>
+</ol>
+
     <script src="script.js"></script>
   </body>
 </html>
